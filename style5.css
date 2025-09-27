@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nanum+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&display=swap');
+@font-face {
+    font-family: 'CustomFont'; /* Произвольное имя */
+    src: url("C:\Users\Тёма\Desktop\мой сайт\сайт крутой\fonts\RazlukaSP-Bold.otf") format('RazlukaSP-Bold');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #bfbfbf;
+    background-color: #000000;
+    /* padding-top: 80px; */
+}
+main{
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.main-nav{
+    font-family: "Merriweather", serif;
+    font-size: 25px;
+    position: absolute;
+    z-index: 100;
+    top: 19px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Отступ между ссылками */
+}
+@media (max-width: 768px){
+    .main-nav{
+        flex-direction: column;     /* Элементы в столбик */
+        align-items: center;        /* ✅ Центрирует по горизонтали */
+        justify-content: flex-start; /* Выравнивает по верху, можно оставить center, если хочешь по центру по высоте */
+        padding: 0;                 /* ✅ Убираем отступы */
+        gap: 15px;
+       }
+}
+.main-nav li {
+    margin: 0;
+    size: 50;
+}
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.main-nav a:hover {
+    color:black;
+    background-color: #d9d9d9;
+}
+.photo1{
+    position: relative;
+    background-color: black;
+    height: 822px ;
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center;
+    object-position: center; /* Центрирует изображение */
+    max-width: 100%; /* Чтобы не выходила за пределы родителя */
+    object-fit: contain;
+
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.adress{
+    position: relative;
+}
