@@ -1,26 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nanum+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&display=swap');* {
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nanum+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&display=swap');
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(156, 48, 48);
 } 
-.info3{
-    position: absolute;
-    margin-left: 780px;
+.main_info{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
+    .main_info{
+        flex-direction: column;
+    }
+}
+.info3{
+position: relative;
+    top: 70px;
+    margin-left: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* отступ между элементами */
+    width: 100%;
+}
+@media (max-width: 768px) {
     .info3{
-    position: absolute;
-    margin-left: 20px;
-    top: 755px;
+        margin-left: 0px;
     }
 }
 .tg{
-    padding-left: 20px;
-    position: absolute;
+    position: relative;
     top: 70px;
+    left: 20px;
+}
+@media (max-width: 768px) {
+    .tg img{
+        width: 350px;
+        height: 350px;
+        object-fit: cover; /* обрезает по краям, сохраняя пропорции */
+    }
+    .tg{
+        padding-left: 0;
+    }
 }
 .tg figcaption {
     position: absolute;
@@ -28,8 +52,7 @@
     color: white;
 }
 .inst{
-    position: absolute;
-    top: 70px;
+    position: relative;
 }
 .inst figcaption {
     position: absolute;
@@ -37,9 +60,7 @@
     color: white;
 }
 .vk{
-    position: absolute;
-    top: 70px;
-    left: 370px;
+    position: relative;
 }
 .vk figcaption {
     position: absolute;
@@ -47,8 +68,7 @@
     color: white;
 }
 .telefon{
-    position: absolute;
-    top:460px;
+    position: relative;
 }
 .telefon figcaption {
     position: absolute;
@@ -61,27 +81,21 @@
     position: absolute;
     z-index: 100;
     top: 19px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
     list-style: none;
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Отступ между ссылками */
-}
+} 
 .main-nav li {
     margin: 0;
-    size: 50;
 }
 .main-nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 .main-nav a:hover {
-    color:black;
-    background-color: #d9d9d9;
+    color:rgb(131, 131, 131);
 }
