@@ -12,6 +12,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
+    
 }
 .main_info{
     display: flex;
@@ -39,7 +40,9 @@ body {
     .info3{
         height: 350px;    
         width: 100%;
-        gap: 10px 15px;
+        gap: 25px 15px;
+        margin-left: 20px;
+        top: 100px;
     }
 }
 .tg{
@@ -99,6 +102,12 @@ body {
     position: absolute;
     font-size: 1.3rem;
     color: white;
+}
+@media (max-width: 768px) {
+    .telefon img{
+        max-width: 90vw;
+        max-height: 43vw;
+    }
 }
 .main-nav{
     font-family: "Merriweather", serif;
