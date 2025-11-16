@@ -4,8 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000000;
 } 
+body {
+    background-image: url(img/ФонМузыка.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
 .tonyray{
     display: flex;
     flex-wrap: wrap;
@@ -27,8 +33,10 @@
 }
 @media (max-width: 768px) {
     .tony img{
-        width: 350px;
-        height: 350px;
+        /* width: 350px;
+        height: 350px; */
+        max-width: 90vw; /* ← 45% от ширины экрана — 2 в ряд */
+        max-height: 90vw;
         object-fit: cover; /* обрезает по краям, сохраняя пропорции */
     }
     .tony{
@@ -50,13 +58,14 @@
 }
 @media (max-width: 768px) {
     .music img {
-        max-width: 40vw; /* ← 45% от ширины экрана — 2 в ряд */
-        max-height: 40vw;
+        max-width: 43vw; /* ← 45% от ширины экрана — 2 в ряд */
+        max-height: 43vw;
         height: auto;
     }
     .music{
         height: 350px;    
         width: 100%;
+        gap: 10px 15px;
     }
 }     
 .main-nav{

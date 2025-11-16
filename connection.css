@@ -5,8 +5,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(156, 48, 48);
 } 
+body {
+    background-image: url(img/фон.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
 .main_info{
     display: flex;
     justify-content: space-around;
@@ -18,17 +24,22 @@
     }
 }
 .info3{
-position: relative;
+    position: relative;
     top: 70px;
     margin-left: 60px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* отступ между элементами */
+    gap: 35px 20px; /* отступ между элементами */
     width: 100%;
 }
 @media (max-width: 768px) {
+    .info3 img{
+        height: auto;
+    }
     .info3{
-        margin-left: 0px;
+        height: 350px;    
+        width: 100%;
+        gap: 10px 15px;
     }
 }
 .tg{
@@ -38,8 +49,8 @@ position: relative;
 }
 @media (max-width: 768px) {
     .tg img{
-        width: 350px;
-        height: 350px;
+        max-width: 90vw; 
+        max-height: 90vw;
         object-fit: cover; /* обрезает по краям, сохраняя пропорции */
     }
     .tg{
@@ -54,6 +65,12 @@ position: relative;
 .inst{
     position: relative;
 }
+@media (max-width: 768px) {
+    .inst img{
+        max-width: 43vw; /* ← 45% от ширины экрана — 2 в ряд */
+        max-height: 43vw;
+    }
+}
 .inst figcaption {
     position: absolute;
     font-size: 1.3rem;
@@ -61,6 +78,14 @@ position: relative;
 }
 .vk{
     position: relative;
+    max-width: 43vw; /* ← 45% от ширины экрана — 2 в ряд */
+    max-height: 43vw;
+}
+@media (max-width: 768px) {
+    .vk img{
+        max-width: 43vw; /* ← 45% от ширины экрана — 2 в ряд */
+        max-height: 43vw;
+    }
 }
 .vk figcaption {
     position: absolute;
