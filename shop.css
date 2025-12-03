@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nanum+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/shopфон.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: "Merriweather", serif;
+    color: white;
+}
+/* Сетка товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 100px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .main-nav {
+        flex-wrap: wrap;
+        padding: 10px 10px;
+        gap: 10px;
+    }
+    .main-nav a {
+        font-size: 20px;
+    }
+}
+.main-nav{
+    font-family: "Merriweather", serif;
+    font-size: 25px;
+    position: absolute;
+    z-index: 100;
+    top: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+} 
+.main-nav li {
+    margin: 0;
+}
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.main-nav a:hover {
+    color:rgb(131, 131, 131);
+}
