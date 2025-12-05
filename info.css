@@ -7,16 +7,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-image: url(img/infoфон.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top left;
+    background-attachment: fixed;
     min-height: 100vh;
     font-family: "Merriweather", serif;
     color: white;
+    line-height: 1.6;
 }
-.main-nav{
+
+.main-nav {
     font-family: "Merriweather", serif;
     font-size: 25px;
     position: absolute;
@@ -29,14 +32,262 @@ body {
     display: flex;
     justify-content: space-between;
 } 
+
 .main-nav li {
     margin: 0;
 }
+
 .main-nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
+
 .main-nav a:hover {
-    color:rgb(131, 131, 131);
+    color: rgb(131, 131, 131);
+}
+
+/* ——— БЛОК: Информация об участниках ——— */
+#info {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 30px 20px;
+    backdrop-filter: blur(5px);
+    margin: 120px auto 60px;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    overflow: hidden;
+}
+
+#info h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.member-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 0;
+    margin-top: 10px;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.member-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    flex-shrink: 0;
+}
+
+/* НОВЫЙ БЛОК — Обёртка для имени и текста */
+.member-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.member-info h3 {
+    font-size: 22px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.member-info p {
+    opacity: 0.9;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    /* ⬇️ Ключевое: выравниваем текст по левому краю с именем */
+    text-indent: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* МОБИЛЬНАЯ АДАПТАЦИЯ */
+@media (max-width: 768px) {
+
+    #info {
+        margin: 100px auto 50px;
+        padding: 25px 15px;
+        width: calc(100% - 30px);
+    }
+
+    #info h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    #info p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .member-card {
+        flex-direction: column; /* Фото сверху, текст снизу */
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .member-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .member-info h3 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .member-info p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #info {
+        padding: 20px 10px;
+        width: calc(100% - 20px);
+    }
+
+    .member-card {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .member-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .member-info h3 {
+        font-size: 18px;
+    }
+
+    .member-info p {
+        font-size: 13px;
+    }
+}
+
+/* Footer — ИСПРАВЛЕННЫЙ СТИЛЬ */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-left .gif-icon {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.footer-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* ⬅️ ЭТО КЛЮЧЕВОЕ — делаем колонку */
+    align-items: center;
+    gap: 2px; /* Отступ между Gw.Fm и "вверх" */
+}
+
+.footer-center a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.footer-center .scroll-top {
+    color: #aaa;
+    font-size: 15   px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    margin: 0;
+}
+
+.footer-center .scroll-top:hover {
+    color: #fff;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.footer-right .phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-right .free-call {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .footer-right {
+        align-items: flex-start;
+    }
+
+    .footer-left .gif-icon {
+        width: 55px;
+    }
+
+    .footer-center {
+        gap: 4px;
+        font-size: 14px;
+    }
 }

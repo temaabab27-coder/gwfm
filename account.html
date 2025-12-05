@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>account</title>
+    <title>Личный Кабинет</title>
     <link rel="stylesheet" href="account.css">
     <link rel="icon" type="image/png" href="C:\Users\Тёма\Downloads\gw.fm (2).jpg">
 </head>
@@ -15,6 +15,56 @@
             <li><a href="shop.html" class="nav-link">shop</a></li>
             <li class="account"><a href="account.html" class="nav-link">account</a></li>
         </nav>
+
+        <!-- ACCOUNT SECTION -->
+        <section id="account" class="section">
+            <h1>Личный Кабинет</h1>
+            <p>Зарегистрируйтесь, чтобы получить доступ к эксклюзивному контенту, рассылкам и предзаказам.</p>
+
+            <form>
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="+7 (XXX) XXX-XX-XX" pattern="^\+7\s?\(?[0-9]{3}\)?\s?[0-9]{3}[-\s]?[0-9]{2}[-\s]?[0-9]{2}$" required>
+                <select required>
+                    <option value="" disabled selected class="placeholder">Выберите регион</option>
+                    <option value="moscow">Москва</option>
+                    <option value="spb">Санкт-Петербург</option>
+                    <option value="kazan">Казань</option>
+                    <option value="novosibirsk">Новосибирск</option>
+                    <option value="ekaterinburg">Екатеринбург</option>
+                    <option value="nizhny_novgorod">Нижний Новгород</option>
+                    <option value="samara">Самара</option>
+                    <option value="omsk">Омск</option>
+                    <option value="krasnoyarsk">Красноярск</option>
+                    <option value="chelyabinsk">Челябинск</option>
+                    <option value="volgograd">Волгоград</option>
+                    <option value="permy">Пермь</option>
+                    <option value="rostov_on_don">Ростов-на-Дону</option>
+                    <option value="ufa">Уфа</option>
+                    <option value="krasnodar">Краснодар</option>
+                    <option value="voronezh">Воронеж</option>
+                    <option value="saratov">Саратов</option>
+                    <option value="tolyatti">Тольятти</option>
+                    <option value="izhevsk">Ижевск</option>
+                    <option value="barnaul">Барнаул</option>
+                    <option value="vladivostok">Владивосток</option>
+                    <option value="yaroslavl">Ярославль</option>
+                    <option value="tomsk">Томск</option>
+                    <option value="penza">Пенза</option>
+                    <option value="kemerovo">Кемерово</option>
+                    <option value="ryazan">Рязань</option>
+                    <option value="astrakhan">Астрахань</option>
+                    <option value="tyumen">Тюмень</option>
+                    <option value="murmansk">Мурманск</option>
+                    <option value="kaliningrad">Калининград</option>
+                    <option value="sochi">Сочи</option>
+                    <option value="sevastopol">Севастополь</option>
+                    <option value="crimea">Республика Крым</option>
+                </select>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </section>
     </main>
 </body>
 </html>
