@@ -9,76 +9,22 @@
 }
 
 body {
-    background-image: url(img/shopфон.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    background-image: url(img/kepkaфон.png);
+    background-size: auto;
+    background-position: top left;
+    background-attachment: fixed;
     font-family: "Merriweather", serif;
     color: white;
 }
-/* Сетка товаров */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 100px 20px 60px; 
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: calc(100vh - 200px); 
+
+/* Контейнер для растягивания на весь экран */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.product-item {
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.product-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-.product-item:hover img {
-    transform: scale(1.05);
-}
-
-/* Адаптивность */
-@media (max-width: 1024px) {
-    .products-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-    .main-nav {
-        flex-wrap: wrap;
-        padding: 10px 10px;
-        gap: 10px;
-    }
-    .main-nav a {
-        font-size: 20px;
-    }
-}
-.main-nav{
+.main-nav {
     font-family: "Merriweather", serif;
     font-size: 25px;
     position: absolute;
@@ -90,50 +36,95 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
-} 
+}
+
 .main-nav li {
     margin: 0;
 }
+
 .main-nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
+
 .main-nav a:hover {
-    color:rgb(131, 131, 131);
-}
-/* Стили для "Sold out" */
-.product-item {
-    position: relative; /* важно для абсолютного позиционирования надписи */
+    color: rgb(131, 131, 131);
 }
 
-.sold-out {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    font-family: "Merriweather", serif;
-    font-size: 24px;
-    font-weight: 700;
+/* Основной контент продукта */
+.product-page {
     display: flex;
+    gap: 40px;
+    padding: 100px 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
     align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none; /* чтобы не мешал hover */
-    transition: opacity 0.3s ease;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    letter-spacing: 2px;
-    z-index: 2;
+    flex-wrap: wrap;
 }
 
-/* Показываем только при наведении — и только если нет класса .first-item */
-.product-item:not(.first-item):hover .sold-out {
-    opacity: 1;
+@media (max-width: 768px) {
+    .product-page {
+        padding: 80px 20px 60px;
+        gap: 20px;
+        flex-direction: column;
+    }
 }
-/* Футер — обычный блок, не fixed/sticky */
+
+.product-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-info h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ea00ea;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 16px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.2s;
+    font-family: inherit;
+}
+
+.add-to-cart:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+
+/* Футер — как в других страницах */
 .footer {
     background-color: #000;
     color: #fff;
@@ -240,7 +231,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Адаптивность */
+/* Адаптивность футера */
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
