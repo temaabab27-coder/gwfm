@@ -102,12 +102,11 @@ main {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* === Сетка товаров === */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 100px 20px 60px 20px; /* Стандартный отступ сверху */
+    padding: 100px 20px 60px 20px; 
     max-width: 1200px;
     margin: 0 auto;
     min-height: calc(100vh - 200px);

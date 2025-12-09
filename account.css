@@ -60,14 +60,11 @@ body {
     backdrop-filter: blur(5px);
     margin: 80px auto 80px;
     max-width: 500px;
-    /* Убираем min-height, оставляем height: auto */
-    /* min-height: calc(100vh - 200px); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    /* Добавляем flex-grow: 1, чтобы контейнер растянулся и вытолкнул футер вниз */
     flex-grow: 1;
 }
 
@@ -83,7 +80,6 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Форма входа */
 #account form {
     display: flex;
     flex-direction: column;
