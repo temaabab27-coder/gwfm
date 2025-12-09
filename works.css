@@ -287,3 +287,6 @@ body {
         gap: 10px 15px;
     }
 }
+.page-container > main {
+    padding-bottom: 120px;
+}
