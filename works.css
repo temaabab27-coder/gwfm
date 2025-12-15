@@ -33,11 +33,9 @@ body {
 }
 @media (max-width: 768px) {
     .tony img{
-        /* width: 350px;
-        height: 350px; */
-        max-width: 90vw; /* ← 45% от ширины экрана — 2 в ряд */
+        max-width: 90vw; 
         max-height: 90vw;
-        object-fit: cover; /* обрезает по краям, сохраняя пропорции */
+        object-fit: cover; 
     }
     .tony{
         padding-left: 0;
